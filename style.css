@@ -257,9 +257,9 @@ ul{
     justify-content: space-between;
 }
 #heart{
-    margin-top: 10px;
-    margin-right: 50px;
-    font-size: 1.5em;
+    margin-top: 27px;
+    margin-right: 20px;
+    font-size: 1.2em;
 }
 #logo-ohmyfood{
     width: 90%;
@@ -291,6 +291,10 @@ ul{
     margin-left: 20px;
     margin-top: -18px;
 }
+#title_menu{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.8em;
+}
 
 
 
@@ -300,8 +304,7 @@ ul{
 
 
 
-
-@media (min-width : 1200px){
+@media (min-width : 1024px){
     #container-menu{
         display: flex;
         flex-direction: row;
@@ -319,7 +322,7 @@ ul{
     }
     
 }
-@media (min-width : 968px){
+@media (min-width : 1088px){
     
     #block-menu{
         flex-direction: row;
