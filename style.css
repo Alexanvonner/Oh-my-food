@@ -331,4 +331,13 @@ ul{
     #block-menu{
         flex-direction: row;
     }
+    
+}
+
+@media (max-width: 1087px){
+    #block{
+        width: 100%;
+    }
+}
+    
 }
