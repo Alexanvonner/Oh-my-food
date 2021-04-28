@@ -8,12 +8,24 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
         <title>Ohmyfood</title>
     </head>
-    <body>
+    <body> 
+        <div id="loader">
+            <span class="lettre">O</span>
+            <span class="lettre">H</span>
+            <span class="lettre">M</span>
+            <span class="lettre">Y</span>
+            <span class="lettre">F</span>
+            <span class="lettre">O</span>
+            <span class="lettre">O</span>
+            <span class="lettre">D</span>
+       </div>
         <header>
             <div id="block-logo">
                 <img id="ohmyfoodlogo" src="images/logo/ohmyfood@2x.svg" alt="logo OHMYFOOD">
             </div>
         </header>
+
+       
         
         <main>
             <div id="container-section1">
@@ -119,5 +131,11 @@
             </ul>
         </footer>
 
+        <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+        <script type="text/javascript">
+           $( document ).ready(function(){
+              $('#loader').fadeOut(5000);/*je cache le loader après le chargement de la page*/
+           });
+        </script>
   </body>
 </html>

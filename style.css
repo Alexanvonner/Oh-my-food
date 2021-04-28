@@ -2,6 +2,65 @@ body{
     margin: 0;
     font-family: 'Roboto', sans-serif;  
 }
+#loader{
+    position : absolute;
+    height : 100%;
+    width : 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    z-index: 2;
+}
+.lettre{
+    color: #484848;
+    font-size: 80px;
+    letter-spacing: 15px;
+    animation: flash 1.2s linear infinite;
+    font-weight: bold;
+}
+.fondu-out{
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+}
+@keyframes flash{
+    0%{
+        color: #fff900;
+        text-shadow:0 0 7 #fff900;
+    }
+    90%{
+        color: #484848;
+        text-shadow: none;
+    }
+    100%{
+        color: #fff900;
+        text-shadow:0 0 7 #fff900;
+    }
+}
+.lettre:nth-child(1){
+    animation-delay: 0.1s;
+}
+.lettre:nth-child(2){
+    animation-delay: 0.2s;
+}
+.lettre:nth-child(3){
+    animation-delay: 0.3s;
+}
+.lettre:nth-child(4){
+    animation-delay: 0.4s;
+}
+.lettre:nth-child(5){
+    animation-delay: 0.5s;
+}
+.lettre:nth-child(6){
+    animation-delay: 0.6s;
+}
+.lettre:nth-child(7){
+    animation-delay: 0.7s;
+}
+.lettre:nth-child(8){
+    animation-delay: 0.8s;
+}
 #section2{
     background-color: #FAFAFA;
 }
