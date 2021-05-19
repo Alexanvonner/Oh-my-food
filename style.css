@@ -385,3 +385,58 @@ ul{
 }
     
 }
+
+/*animation*/
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(.1);
+    }
+    85%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+.price-menu{
+    animation: FadeIn 500ms linear;
+    animation-fill-mode: both;
+}
+
+
+.price-menu:nth-child(1) {animation-delay: 0.0s; }
+.price-menu:nth-child(2) {animation-delay: 0.2s; }
+.price-menu:nth-child(3) {animation-delay: 0.4s; }
+.price-menu:nth-child(4) {animation-delay: 0.6s; }
+.price-menu:nth-child(5) {animation-delay: 0.8s; }
+.price-menu:nth-child(6) {animation-delay: 1s; }
+.price-menu:nth-child(7) {animation-delay: 1.2s; }
+.price-menu:nth-child(8) {animation-delay: 1.4s; }
+.price-menu:nth-child(9) {animation-delay: 1.6s; }
+.price-menu:nth-child(10) {animation-delay: 1.8s; }
+.price-menu:nth-child(11) {animation-delay: 2s; }
+
+
+
+
+
+
+
+
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(.1);
+    }
+    85%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
