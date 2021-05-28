@@ -257,9 +257,24 @@ ul{
     flex-direction: column;
 
 }
-.menu{
+.menuEntree{
     width: 100%;
+       animation: FadeIn 1500ms linear;
+    animation-fill-mode: both;
 }
+
+.menuPlat{
+    width: 100%;
+       animation: FadeIn 2500ms linear;
+    animation-fill-mode: both;
+}
+.menuDessert{
+    width: 100%;
+       animation: FadeIn 3500ms linear;
+    animation-fill-mode: both;
+}
+
+
 .price-menu{
     background-color: #FFFFFF;
     width: 90%;
@@ -346,6 +361,62 @@ ul{
 }
 
 
+.btn-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 60px;
+    font-size: 1.5rem;
+    border: transparent;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    margin-top: -7px;
+}
+.btn-heart .gradient, .btn-heart .nograd {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-heart .gradient {
+    background-color: transparent;
+    color: black;
+}
+.btn-heart .nograd {  
+    z-index: -1;
+    width: 100%;
+    height: 0;
+}
+
+.btn-heart:hover .gradient {
+    color: transparent;
+    z-index: -1;
+  }
+.btn-heart:hover .nograd {
+    z-index: 1;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: height 0.6s linear;
+    height: 100%;
+    margin-top: -10px;
+}
+.btn-heart:active .gradient {
+    color: transparent;
+    z-index: -1;
+}
+.
+.btn-heart:active .nograd {
+    z-index: 1;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: height 0.9s linear;
+    height: 100%;
+}
+
 
 
 
@@ -384,48 +455,32 @@ ul{
     }
 }
     
-}
+
 
 /*animation*/
-@keyframes FadeIn{
-    0%{
-        opacity: 0;
-        transform: scale(.1);
-    }
-    85%{
-        opacity: 1;
-        transform: scale(1.05);
-    }
-    100%{
-        transform: scale(1);
-    }
-}
+
+menuEntree{ animation-delay: 1s;}
+
+menuPlat{ animation-delay: 2s;}
+
+menuDessert{ animation-delay: 3s;}
+
+.price-menu:nth-child(1) {animation-delay: 1.0s; }
+.price-menu:nth-child(2) {animation-delay: 1.2s; }
+.price-menu:nth-child(3) {animation-delay: 1.4s; }
+.price-menu:nth-child(4) {animation-delay: 2.4s; }
+.price-menu:nth-child(5) {animation-delay: 2.6s; }
+.price-menu:nth-child(6) {animation-delay: 2.8s; }
+.price-menu:nth-child(7) {animation-delay: 3.2s; }
+.price-menu:nth-child(8) {animation-delay: 3.4s; }
+.price-menu:nth-child(9) {animation-delay: 3.6s; }
+.price-menu:nth-child(10) {animation-delay: 3.8s; }
+.price-menu:nth-child(11) {animation-delay: 4s; }
 
 .price-menu{
     animation: FadeIn 500ms linear;
     animation-fill-mode: both;
 }
-
-
-.price-menu:nth-child(1) {animation-delay: 0.0s; }
-.price-menu:nth-child(2) {animation-delay: 0.2s; }
-.price-menu:nth-child(3) {animation-delay: 0.4s; }
-.price-menu:nth-child(4) {animation-delay: 0.6s; }
-.price-menu:nth-child(5) {animation-delay: 0.8s; }
-.price-menu:nth-child(6) {animation-delay: 1s; }
-.price-menu:nth-child(7) {animation-delay: 1.2s; }
-.price-menu:nth-child(8) {animation-delay: 1.4s; }
-.price-menu:nth-child(9) {animation-delay: 1.6s; }
-.price-menu:nth-child(10) {animation-delay: 1.8s; }
-.price-menu:nth-child(11) {animation-delay: 2s; }
-
-
-
-
-
-
-
-
 
 @keyframes FadeIn{
     0%{
