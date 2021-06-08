@@ -45,6 +45,9 @@ body{
       
   }
 /*code css hors loader*/
+.contactLink{
+    color: white;
+}
 
 #section2{
     background-color: #FAFAFA;
@@ -74,6 +77,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
+#btn-restaurant:hover{
+    box-shadow: 5px 5px 5px #87CEEB;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+}
 .itemrestaurant{
     border-radius: 20px;
     margin-bottom: 20px;
@@ -84,7 +92,7 @@ footer{
 }
 #explorer{
     color: white;
-    font-size: 0.70em;
+    font-size: 0.9em;
 }
 #parisbelleville{
     display: flex;
@@ -407,7 +415,7 @@ ul{
     color: transparent;
     z-index: -1;
 }
-.
+
 .btn-heart:active .nograd {
     z-index: 1;
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -417,7 +425,12 @@ ul{
     height: 100%;
 }
 
-
+.test{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 
@@ -495,3 +508,78 @@ menuDessert{ animation-delay: 3s;}
         transform: scale(1);
     }
 }
+
+
+
+
+
+.fa-check-circle{
+    color: #8ee2ff;
+    border: 1px solid rgba(255, 255, 255, 0.952);
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    width:-10px;
+    overflow:hidden;
+    
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(90deg);
+    }
+    to { 
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotationInverse{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(90deg)
+    }
+
+}
+
+
+
+ .price-menu:hover .fa-check-circle{
+   animation: rotation 500ms ease;
+ }
+ .price-menu:not(:hover) .fa-check-circle{
+   animation: rotationInverse 300ms ease;
+  
+ }
+
+.animation{
+    height: 90px;
+    width: 0px;
+    background-color:#99e2d0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+    margin-top: -49px;
+}
+
+.price-menu:hover .animation{
+    width:80px;
+    transition-duration: 500ms;
+}
+
+.price-menu:not(:hover) .animation{
+   transition: width 300ms linear;
+   width:0px;
+}
+
+
+
+
+
+
+
+
+
+
