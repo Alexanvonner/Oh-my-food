@@ -161,7 +161,7 @@ ul{
 }
 #logoohmyfoodfooter{
     width: 140px;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-top: 10px;
 }
 #ohmyfoodlogo
@@ -269,7 +269,6 @@ ul{
     margin-right: auto;
     position: relative;
     margin-top: -70px;
-    height: 635px;
 }
 #block-menu{
     display: flex;
@@ -329,12 +328,10 @@ ul{
     flex-direction: row;
     justify-content: space-between;
 }
-.sub_title_menu{
-    margin-top: -15px;
-}
+
 .price{
     margin-right: 20px;
-    margin-top: -9px;
+    margin-top: 0px;
     font-weight: bold;
 }
 #block1{
@@ -351,7 +348,7 @@ ul{
     text-align: center;
 }
 #arrow{
-    margin-top: -12px;
+    margin-top: 7px;
     margin-left: 13px;
     
 }
@@ -364,8 +361,12 @@ ul{
     white-space: nowrap;
 }
 .sub_title_menu{
-    margin-top: -10px;
-    margin-left: 20px;;
+    margin-top: 0px;
+    margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    
 }
 .line{
     border: solid #99e2d0;
@@ -443,6 +444,8 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    overflow: hidden;
+    margin-top: -13px;
 }
 
 
