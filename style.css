@@ -45,7 +45,12 @@ body{
       
   }
 /*code css hors loader*/
-
+.contactLink{
+    color: white;
+}
+header{
+    height:70px;
+}
 #section2{
     background-color: #FAFAFA;
 }
@@ -74,6 +79,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
+#btn-restaurant:hover{
+    box-shadow: 5px 5px 5px #87CEEB;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+}
 .itemrestaurant{
     border-radius: 20px;
     margin-bottom: 20px;
@@ -84,7 +94,7 @@ footer{
 }
 #explorer{
     color: white;
-    font-size: 0.70em;
+    font-size: 0.9em;
 }
 #parisbelleville{
     display: flex;
@@ -121,6 +131,7 @@ footer{
 }
 a{
     text-decoration:none;
+    color: white;
 }
 h2,h3{
     color: black;
@@ -128,14 +139,15 @@ h2,h3{
     font-size: 1.2em;
 }
 h3{
-    font-weight: 100;
+    font-weight: 400;
 }
 li{
     color: white;
 }
 ul{
     list-style: none;
-    margin-left: -20px;
+    margin-top: -17px;
+    margin: 0;
 }
 .fontawesome{
     display: flex;
@@ -144,16 +156,20 @@ ul{
     margin-top: 20px;
     color:#7E7E7E;
 }
+.fa-utensils,.fa-hands-helping{
+    color: white;
+}
 #logoohmyfoodfooter{
-    width: 100px;
+    width: 140px;
     margin-left: 20px;
-    margin-top: 4%;
+    margin-top: 10px;
 }
 #ohmyfoodlogo
 {
     font-size: 1em;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 18px;
 }
 #containersection4{
     display: flex;
@@ -185,6 +201,8 @@ ul{
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #f3f3f3;
+    box-shadow: 5px 5px 5px 6px gainsboro;
 }
 #block-logo{
     display: flex;
@@ -201,7 +219,7 @@ ul{
     margin-right: 1%;
 }
 .fa-heart:before {
-    FONT-SIZE: 2em;
+    FONT-SIZE: 1.5em;
     color: black;
 }
 .sub_tittle{
@@ -251,6 +269,7 @@ ul{
     margin-right: auto;
     position: relative;
     margin-top: -70px;
+    height: 635px;
 }
 #block-menu{
     display: flex;
@@ -297,6 +316,11 @@ ul{
     display: flex;
     align-items: center;
 }
+#container-order:hover{
+    box-shadow: 5px 5px 5px #87CEEB;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+}
 #order{
     color: white;
 }
@@ -341,10 +365,7 @@ ul{
 }
 .sub_title_menu{
     margin-top: -10px;
-    margin-left: 20px;
-    overflow: hidden;
-    text-overflow: ellipsis; 
-    white-space: nowrap;
+    margin-left: 20px;;
 }
 .line{
     border: solid #99e2d0;
@@ -365,8 +386,8 @@ ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 60px;
+    width: 90px;
+    height: 80px;
     font-size: 1.5rem;
     border: transparent;
     background-color: transparent;
@@ -407,7 +428,7 @@ ul{
     color: transparent;
     z-index: -1;
 }
-.
+
 .btn-heart:active .nograd {
     z-index: 1;
     background: -webkit-linear-gradient(#9356DC, #FF79DA);
@@ -417,9 +438,12 @@ ul{
     height: 100%;
 }
 
-
-
-
+.test{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 
 
@@ -495,3 +519,87 @@ menuDessert{ animation-delay: 3s;}
         transform: scale(1);
     }
 }
+
+
+
+
+
+.fa-check-circle{
+    color: #8ee2ff;
+    border: 1px solid rgba(255, 255, 255, 0.952);
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    width:-10px;
+    overflow:hidden;
+    
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(90deg);
+    }
+    to { 
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotationInverse{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(90deg)
+    }
+
+}
+
+
+
+ .price-menu:hover .fa-check-circle{
+   animation: rotation 500ms ease;
+ }
+ .price-menu:not(:hover) .fa-check-circle{
+   animation: rotationInverse 300ms ease;
+  
+ }
+
+.animation{
+    width: 0px;
+    background-color:#99e2d0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+    margin-top: -49px;
+    z-index: 2;
+}
+
+.price-menu:hover .animation{
+    width:80px;
+    transition-duration: 500ms;
+}
+
+.price-menu:not(:hover) .animation{
+   transition: width 300ms linear;
+   width:0px;
+}
+
+
+
+.footerTop{
+    margin-left: 4px;
+}
+
+#remonte{
+    margin-top: -17px;
+}
+.fa-utensils{
+    margin-left: 4px;
+
+}
+.right{
+    margin-left: 24px;
+}
+
+
