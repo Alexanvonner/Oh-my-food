@@ -1,6 +1,60 @@
 body{
     margin: 0;
     font-family: 'Roboto', sans-serif;  
+    display: flex;
+    flex-direction: column;
+}
+/*loader*/
+@keyframes container{
+    0% {
+      z-index:2;
+      opacity:1;
+    }
+    25%{
+      opacity:0.8;
+    }
+    65%{
+      opacity:0.5;
+    }
+    85%{
+      opacity: 0.3;
+    }
+    100% {
+      opacity:0;
+      visibility:hidden;
+      z-index:0;
+    }
+  }
+  #loader {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    bottom:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    animation: container 1000ms 2000ms ease-in-out both;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    z-index: 2;
+    opacity:1 ;
+  }
+
+  #logo-load{
+      width:200px;
+      
+  }
+/*code css hors loader*/
+#fonctionnement,#restaurant{
+    font-size: 1.7em;
+}
+.contactLink{
+    color: white;
+}
+header{
+    height:70px;
 }
 #section2{
     background-color: #FAFAFA;
@@ -30,6 +84,11 @@ footer{
     justify-content: center;
     align-items: center;
 }
+#btn-restaurant:hover{
+    box-shadow: 5px 5px 5px #87CEEB;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+}
 .itemrestaurant{
     border-radius: 20px;
     margin-bottom: 20px;
@@ -40,7 +99,7 @@ footer{
 }
 #explorer{
     color: white;
-    font-size: 0.70em;
+    font-size: 0.9em;
 }
 #parisbelleville{
     display: flex;
@@ -77,6 +136,7 @@ footer{
 }
 a{
     text-decoration:none;
+    color: white;
 }
 h2,h3{
     color: black;
@@ -84,32 +144,36 @@ h2,h3{
     font-size: 1.2em;
 }
 h3{
-    font-weight: 100;
+    font-weight: 400;
 }
 li{
     color: white;
 }
 ul{
     list-style: none;
-    margin-left: -20px;
+    margin-top: -17px;
+    margin: 0;
 }
 .fontawesome{
     display: flex;
 }
 .fa, .fas {
-    margin-top: 20px;
     color:#7E7E7E;
 }
+.fa-utensils,.fa-hands-helping{
+    color: white;
+}
 #logoohmyfoodfooter{
-    width: 100px;
-    margin-left: 20px;
-    margin-top: 4%;
+    width: 140px;
+    margin-left:43px;
+    margin-top: 10px;
 }
 #ohmyfoodlogo
 {
     font-size: 1em;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 18px;
 }
 #containersection4{
     display: flex;
@@ -141,6 +205,8 @@ ul{
     width: 100%;
     display: flex;
     justify-content: center;
+    background-color: #f3f3f3;
+    box-shadow: 5px 5px 5px 6px gainsboro;
 }
 #block-logo{
     display: flex;
@@ -157,7 +223,7 @@ ul{
     margin-right: 1%;
 }
 .fa-heart:before {
-    FONT-SIZE: 2em;
+    FONT-SIZE: 1.5em;
     color: black;
 }
 .sub_tittle{
@@ -196,7 +262,7 @@ ul{
 
 #photo-menu{
     width: 100%;
-    height: 350px;
+    height: 500px;
     object-fit: cover;
 }
 #block{
@@ -205,15 +271,32 @@ ul{
     border-radius: 30px 30px 0px 0px;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
+    margin-top: -70px;
 }
 #block-menu{
     display: flex;
     flex-direction: column;
 
 }
-.menu{
+.menuEntree{
     width: 100%;
+       animation: FadeIn 1500ms linear;
+    animation-fill-mode: both;
 }
+
+.menuPlat{
+    width: 100%;
+       animation: FadeIn 2500ms linear;
+    animation-fill-mode: both;
+}
+.menuDessert{
+    width: 100%;
+       animation: FadeIn 3500ms linear;
+    animation-fill-mode: both;
+}
+
+
 .price-menu{
     background-color: #FFFFFF;
     width: 90%;
@@ -236,6 +319,11 @@ ul{
     display: flex;
     align-items: center;
 }
+#container-order:hover{
+    box-shadow: 5px 5px 5px #87CEEB;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+
+}
 #order{
     color: white;
 }
@@ -244,12 +332,10 @@ ul{
     flex-direction: row;
     justify-content: space-between;
 }
-.sub_title_menu{
-    margin-top: -15px;
-}
+
 .price{
     margin-right: 20px;
-    margin-top: -9px;
+    margin-top: 0px;
     font-weight: bold;
 }
 #block1{
@@ -257,16 +343,16 @@ ul{
     justify-content: space-between;
 }
 #heart{
-    margin-top: 10px;
-    margin-right: 50px;
-    font-size: 1.5em;
+    margin-top: 27px;
+    margin-right: 20px;
+    font-size: 1.2em;
 }
 #logo-ohmyfood{
     width: 90%;
     text-align: center;
 }
 #arrow{
-    margin-top: -12px;
+    margin-top: 7px;
     margin-left: 13px;
     
 }
@@ -274,10 +360,18 @@ ul{
     padding-top: 15px;
     margin-left: 20px;
     font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    width: 75%;
 }
 .sub_title_menu{
-    margin-top: -10px;
+    margin-top: 0px;
     margin-left: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    
 }
 .line{
     border: solid #99e2d0;
@@ -285,18 +379,86 @@ ul{
     margin-left: 20px;
     margin-top: -18px;
 }
+#title_menu{
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.8em;
+}
+#block-btn{
+    height: 150px;
+}
+
+
+.btn-heart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90px;
+    height: 60px;
+    font-size: 1.5rem;
+    border: transparent;
+    background-color: transparent;
+    position: absolute;
+    right: 0;
+    /* margin-top: -7px; */
+}
+.btn-heart .gradient, .btn-heart .nograd {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+     position: absolute;
+
+}
+.btn-heart .gradient {
+    background-color: transparent;
+    color: black;
+}
+.btn-heart .nograd {  
+    z-index: -1;
+    width: 100%;
+    height: 0%;
+}
+
+.btn-heart:hover .gradient {
+    color: transparent;
+    z-index: -1;
+  }
+.btn-heart:hover .nograd {
+    z-index: 1;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: height 0.6s linear;
+    height: 100%;
+   
+    /* margin-top: -10px; */
+}
+.btn-heart:active .gradient {
+    color: transparent;
+    z-index: -1;
+}
+
+.btn-heart:active .nograd {
+    z-index: 1;
+    background: -webkit-linear-gradient(#9356DC, #FF79DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: height 0.9s linear;
+    height: 100%;
+}
+
+.test{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: hidden;
+    margin-top: -13px;
+}
 
 
 
-
-
-
-
-
-
-
-@media (min-width : 1025px){
-
+@media (min-width : 1024px){
     #container-menu{
         display: flex;
         flex-direction: row;
@@ -314,9 +476,148 @@ ul{
     }
     
 }
-@media (min-width : 968px){
+@media (min-width : 1088px){
     
     #block-menu{
         flex-direction: row;
     }
+    
+}
+
+@media (max-width: 1087px){
+    #block{
+        width: 100%;
+    }
+}
+    
+
+
+/*animation*/
+
+menuEntree{ animation-delay: 1s;}
+
+menuPlat{ animation-delay: 2s;}
+
+menuDessert{ animation-delay: 3s;}
+
+.price-menu:nth-child(1) {animation-delay: 1.0s; }
+.price-menu:nth-child(2) {animation-delay: 1.2s; }
+.price-menu:nth-child(3) {animation-delay: 1.4s; }
+.price-menu:nth-child(4) {animation-delay: 2.4s; }
+.price-menu:nth-child(5) {animation-delay: 2.6s; }
+.price-menu:nth-child(6) {animation-delay: 2.8s; }
+.price-menu:nth-child(7) {animation-delay: 3.2s; }
+.price-menu:nth-child(8) {animation-delay: 3.4s; }
+.price-menu:nth-child(9) {animation-delay: 3.6s; }
+.price-menu:nth-child(10) {animation-delay: 3.8s; }
+.price-menu:nth-child(11) {animation-delay: 4s; }
+
+.price-menu{
+    animation: FadeIn 500ms linear;
+    animation-fill-mode: both;
+}
+
+@keyframes FadeIn{
+    0%{
+        opacity: 0;
+        transform: scale(.1);
+    }
+    85%{
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+.fa-check-circle{
+    color: #8ee2ff;
+    border: 1px solid rgba(255, 255, 255, 0.952);
+    background-color: white;
+    border-radius: 50%;
+    margin: auto;
+    width:-10px;
+    overflow:hidden;
+    
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(90deg);
+    }
+    to { 
+        transform: rotate(0deg);
+    }
+}
+@keyframes rotationInverse{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(90deg)
+    }
+
+}
+
+
+
+ .price-menu:hover .fa-check-circle{
+   animation: rotation 500ms ease;
+ }
+ .price-menu:not(:hover) .fa-check-circle{
+   animation: rotationInverse 300ms ease;
+  
+ }
+
+.animation{
+    width: 0px;
+    background-color:#99e2d0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 10px 10px 0px;
+    overflow: hidden;
+    margin-top: -49px;
+    z-index: 2;
+}
+
+.price-menu:hover .animation{
+    width:80px;
+    transition-duration: 500ms;
+}
+
+.price-menu:not(:hover) .animation{
+   transition: width 300ms linear;
+   width:0px;
+}
+
+
+
+.footerTop{
+    margin-left: 4px;
+}
+
+#remonte{
+    margin-top: -17px;
+}
+.fa-utensils{
+    margin-left: 4px;
+
+}
+.right{
+    margin-left: 24px;
+}
+
+
+
+
+
+
+.fa-map-marker-alt, .fa-map-marker-alt, .fa-mobile-alt, .fa-store, .fa-hands-helping,.fa-list-ul, .fa-arrow-left{
+    margin-top: 20px;
 }
