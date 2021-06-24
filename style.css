@@ -330,7 +330,7 @@ ul{
 .container-title-menu{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+   
 }
 
 .price{
@@ -587,13 +587,13 @@ menuDessert{ animation-delay: 3s;}
 }
 
 .price-menu:hover .animation{
-    width:80px;
+    width: 20%;
     transition-duration: 500ms;
 }
 
 .price-menu:not(:hover) .animation{
    transition: width 300ms linear;
-   width:0px;
+   width: 0%;
 }
 
 
